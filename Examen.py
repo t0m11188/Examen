@@ -60,7 +60,7 @@ def menu():
         print("4. Salir.")
         print("5.- Mostrar creador del código.")
         
-        opcion = input("Seleccione una opción (1-4): ")
+        opcion = input("Seleccione una opción (1-5): ")
         
         if opcion == "1":
             stock_marca()
