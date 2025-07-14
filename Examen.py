@@ -58,6 +58,7 @@ def menu():
         print("2. Búsqueda por RAM y precio.")
         print("3. Eliminar producto.")
         print("4. Salir.")
+        print("5.- Mostrar creador del código.")
         
         opcion = input("Seleccione una opción (1-4): ")
         
@@ -70,6 +71,8 @@ def menu():
         elif opcion == "4":
             print("Saliendo del menú....")
             break
+        elif opcion== "5":
+            print("Examen de Tomás Benjamín Rojas Montiel...")
         else:
             print("Opción no válida. Intente nuevamente.")
 
