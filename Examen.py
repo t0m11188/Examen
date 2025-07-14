@@ -26,6 +26,16 @@ def stock_marca():
     if not encontrados:
         print("No se encontró stock para esa marca.")
 
+def buscar_por_ram_y_precio():
+    ram = input("Ingrese cantidad de RAM (ej: 8GB): ").upper()
+    precio_max = int(input("Ingrese precio máximo: "))
+    encontrados = False
+    for clave, detalles in computadores.items():
+        if detalles[2] == ram and clave in stock and stock[clave][0] <= precio_max:
+            print(f"{clave}: {detalles}, Precio: {stock[clave][0]}")
+            encontrados = True
+    if not encontrados:
+        print("No se encontraron productos con esas características.")
 
 
 
@@ -53,6 +63,8 @@ def menu():
         
         if opcion == "1":
             stock_marca()
+        if opcion == "2":
+            buscar_por_ram_y_precio()
         if opcion == "3":
             eliminar_producto()
         elif opcion == "4":
