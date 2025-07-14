@@ -17,16 +17,15 @@ stock = {
                  }
 
 def stock_marca():
-    marca =input("Ingrese marca: ").upper()
-    suma=0
-    for clave, valor in computadores.items():
-            for v in valor:
-                if v==marca:
-                    for klave, balor in stock.items():
-                        for b in balor:
-                            if klave==clave:
-                                    print("El stock disponible de la marca", marca, "es de", balor[1], "unidades")
-                                    return
+    marca = input("Ingrese marca: ").upper()
+    encontrados = False
+    for clave, detalles in computadores.items():
+        if detalles[0].upper() == marca and clave in stock:
+            print(f"{clave}: {stock[clave][1]} unidades disponibles")
+            encontrados = True
+    if not encontrados:
+        print("No se encontró stock para esa marca.")
+
 
 
 
